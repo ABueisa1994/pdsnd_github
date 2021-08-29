@@ -90,11 +90,11 @@ def time_stats(df):
     print('The most common month is {}'.format(months[month_mode -1]))
 
     # TO DO: display the most common day of week
-    print('The most common day is {}' .format(df['day_of_week'].mode()[0]))
+    print('The most common day is {}'.format(df['day_of_week'].mode()[0]))
 
     # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
-    print('The most common hour in use is {}' .format(df['hour'].mode()[0]))
+    print('The most common hour in use is {}'.format(df['hour'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -107,14 +107,14 @@ def station_stats(df):
     start_time = time.time()
 
     # TO DO: display most commonly used start station
-    print('The most common starting station is {}' .format(df['Start Station'].mode()[0]))
+    print('The most common starting station is {}'.format(df['Start Station'].mode()[0]))
 
     # TO DO: display most commonly used end station
-    print('The most common ending station is {}' .format(df['End Station'].mode()[0]))
+    print('The most common ending station is {}'.format(df['End Station'].mode()[0]))
 
     # TO DO: display most frequent combination of start station and end station trip
     com_stations = df['Start Station'].map(str) + ' to ' + df['End Station']
-    print('The Common Combination of Stations is {}' .format(com_stations.mode()[0]))
+    print('The Common Combination of Stations is {}'.format(com_stations.mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -147,21 +147,21 @@ def user_stats(df):
     start_time = time.time()
 
     # TO DO: Display counts of user types
-    print('The users catagories are \n {}' .format(df['User Type'].value_counts()))
+    print('The users catagories are \n {}'.format(df['User Type'].value_counts()))
 
     # TO DO: Display counts of gender
     if ('Gender' not in df):
         print('Sorry, the gender data are not available for Washington')
     else:
-        print('The genders are \n {}' .format(df['Gender'].value_counts()))
+        print('The genders are \n {}'.format(df['Gender'].value_counts()))
 
     # TO DO: Display earliest, most recent, and most common year of birth
     if ('Birth Year' not in df):
         print('Sorry, the birth year data are not available for Washington')
     else:
-        print('The most common birth year is: {}' .format(df['Birth Year'].mode()[0]))
-        print('The most recent birth year is: {}' .format(df['Birth Year'].max()))
-        print('The earliest birth year is: {}' .format(df['Birth Year'].min()))
+        print('The most common birth year is: {}'.format(df['Birth Year'].mode()[0]))
+        print('The most recent birth year is: {}'.format(df['Birth Year'].max()))
+        print('The earliest birth year is: {}'.format(df['Birth Year'].min()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
