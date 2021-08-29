@@ -147,21 +147,21 @@ def user_stats(df):
     start_time = time.time()
 
     # TO DO: Display counts of user types
-    print('The users catagories are \n {}' .format(df['User Type'].value_counts()))
+    print('The users catagories are \n {}'.format(df['User Type'].value_counts()))
 
     # TO DO: Display counts of gender
     if ('Gender' not in df):
         print('Sorry, the gender data are not available for Washington')
     else:
-        print('The genders are \n {}' .format(df['Gender'].value_counts()))
+        print('The genders are \n {}'.format(df['Gender'].value_counts()))
 
     # TO DO: Display earliest, most recent, and most common year of birth
     if ('Birth Year' not in df):
         print('Sorry, the birth year data are not available for Washington')
     else:
-        print('The most common birth year is: {}' .format(df['Birth Year'].mode()[0]))
-        print('The most recent birth year is: {}' .format(df['Birth Year'].max()))
-        print('The earliest birth year is: {}' .format(df['Birth Year'].min()))
+        print('The most common birth year is: {}'.format(df['Birth Year'].mode()[0]))
+        print('The most recent birth year is: {}'.format(df['Birth Year'].max()))
+        print('The earliest birth year is: {}'.format(df['Birth Year'].min()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
