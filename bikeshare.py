@@ -90,11 +90,11 @@ def time_stats(df):
     print('The most common month is {}'.format(months[month_mode -1]))
 
     # TO DO: display the most common day of week
-    print('The most common day is {}' .format(df['day_of_week'].mode()[0]))
+    print('The most common day is {}'.format(df['day_of_week'].mode()[0]))
 
     # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
-    print('The most common hour in use is {}' .format(df['hour'].mode()[0]))
+    print('The most common hour in use is {}'.format(df['hour'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
